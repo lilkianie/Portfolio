@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'><link rel="stylesheet" href="./style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+img {
+  display: block;
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+  width: 70%;
+  border: 2px solid white;
+  padding: 
+  
+}
+body {
+  background-color:white;
+}
+#container {
+ margin-left: 20%;
+ margin-right: 15%;
+ border: 1px solid lightgray;
+
+}
+.rectangle {
+  /*height: 200px;*/
+  width: 22%;
+  background-color: #B0CFDE;
+  position: absolute;
+  left: 58%;
+  border: 0px solid black;
+  top: 0px;
+  height: 120%;
+  padding-top: 43px;
+}
+#rect2 {
+ background-color: #FBD5AB;
+  margin-top: 45px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#firstcontent {
+ width: 55%;
+ border: 0px solid black;
+
+}
+.arrow {
+  border: solid #B0CFDE;
+  border-width: 0 8px 7px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+p {
+ text-align:center;
+ font-family: 'Phudu', cursive;
+ color:#654321;
+ font-size: 75%;
+}
+#myname {
+font-family: 'Dancing Script', cursive;
+color: white;
+font-size: 90px;
+transform: rotate(-5deg);
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+letter-spacing: 5px;
+margin-left: 5%;
+text-align:left;
+z-index: 99999;
+position: relative;
+}
+h2 {
+ text-align:left;
+ margin-left: 30%;
+ transform: rotate(-3deg);
+ font-family: "Lucida Console", "Courier New", monospace;
+ color: white;
+ text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+ letter-spacing: 5px;
+ font-size: 30px;
+}
+h4 {
+margin-top: 5%;
+letter-spacing: 5px;
+color: white;
+margin-left: 15%;
+text-align:left;
+font-size: 13px;
+margin-bottom: 5%;
+}
+h5 {
+  font-family: 'Dancing Script', cursive;
+  color:white;
+  text-align: center;
+}
+
+:root {     
+  --color-icon: #535c68;  
+  --social-icon1: #3b5999;
+  --social-icon2: #e4405f;
+  --social-icon3: #43C6DB;
+  --social-icon4: #cd201f;
+  --social-icon5: #0077B5;  
+}
+
+* {
+  margin: 0;
+  padding: 0; 
+}
+
+section {
+  width: 10%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  background: var(--bg);
+  z-index: -10;
+}
+
+.icon-list {
+  width: 50%;
+  max-width: 50rem;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-item {
+  list-style: none;
+}
+
+.icon-link {  
+  display: inline-flex;
+  font-size: 2rem;  
+  text-decoration: none;  
+  color: var(--color-icon);
+  width: 6rem;
+  height: 6rem;   
+  transition: .5s linear;
+  position: relative;
+  z-index: 1;
+  margin: auto
+}
+
+.icon-link:hover {
+  color: #fff;
+}
+
+.icon-link i {
+  margin: auto;    
+}
+
+.icon-link::before {  
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 6rem;
+  height: 6rem;
+  background: #000;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
+}
+  
+.icon-link:hover::before {  
+  transform: scale(1);
+}
+
+.icon-item:nth-child(1) a:hover:before { 
+  background: var(--social-icon1); 
+}
+
+.icon-item:nth-child(2) a:hover:before { 
+  background: var(--social-icon2); 
+}
+
+.icon-item:nth-child(3) a:hover:before { 
+  background: var(--social-icon3); 
+}
+
+.icon-item:nth-child(4) a:hover:before { 
+  background: var(--social-icon4); 
+}
+
+.icon-item:nth-child(5) a:hover:before { 
+  background: var(--social-icon5); 
+}
+
+
+ <title>ABOUT ME</title>
+ 
+ </style>
+ </head>
+
+  
+  <body>
+<div id="container">
+<div id="rect2">
+  <hr style="border: 2px white dashed"/>
+  <h1 id="myname">Hezekiah Anne</h1>
+  <h2>FELISILDA</h2>
+  <h4 style="font-family: 'Phudu', cursive;">1ST YEAR CS STUDENT</h4> 
+  <hr style="border: 2px white dashed"/>
+  </div>
+
+ <div i class="arrow right"></div>
+ <div id="firstcontent"> 
+
+  <p>I AM HEZEKIAH ANNE C. FELISILDA, YOU CAN CALL ME KYANA OR KIAN FOR SHORT. I AM 21 YEARS OLD BORN ON DECEMBER 17, 2001. AS A PERSON
+I HAVE THE PERSONALITY TO BE SILENT OR TALKATIVE, IT DEPENDS ON MY MOOD IF I HAVE LOTS OF ENERGY I TEND TO BE REALLY TALKATIVE. I OBSERVE A LOT TO MY 
+SURROUNDINGS AND ESPECIALLY THE PEOPLE AROUND ME. YOU CAN CALL ME AN INTROVERT AT MOST TIMES. BUT USUALLY I'M FUN TO BE WITH LIKE THE "PROBLEM-FREE" PERSON.</p>
+<br>  <div i class="arrow right"></div>
+  <p>MY GUIDING PRINCIPLE IS THAT DO NOT BE SO STRESSED AND STUCKED TO ONE PROBLEM. I AM THAT TYPE OF PERSON THAT IF I CAN'T SOLVE ONE 
+PROBLEM ON TIME I DON'T DWELL ON IT TOO MUCH AND IT REALLY STRESSES ME WHEN I DO THAT'S WHY I TAKE A BREAK FIRST AND THEN GO BACK ON IT AGAIN WHEN I THINK OF 
+SOMETHING.</p>
+<br>  <div i class="arrow right"></div>
+  <p>ONE OF MY ACCOMPLISHMENTS IS WHEN I WAS PART OF THE HONORS LIST ON MY JUNIOR HIGHSCHOOL YEARS. ALSO WHEN I WAS PART OF THE SSG 
+  NATIONALS WHEN I WAS GRADE 12 STUDENT. WHEN I ALSO JOINED THE PHOTOJOURNALISM EVENT HELD AT THE DR. CECILIO PUTONG SCHOOL.</p>
+<br>  <div i class="arrow right"></div>
+  <p>MY DREAMS AND FUTURE PLANS IS TO GRADUATE SUCCESSFULLY WITH MY CHOSEN COURSE AND TO FIND A COMPANY THAT CAN PAY ME WELL TO PAY 
+  BACK MY PARENTS ON HOW MUCH THEY SPENT ON ME AND TO HELP MY BROTHER AND SISTER WITH THEIR SCHOOL. ALSO I PLAN ON WORKING ABROAD.</p>
+<br>
+</div>
+<div class="rectangle">  
+  <center>
+
+  <img src="images/pic1.jpg" alt="me">
+  <img src="images/pic2.jpg" alt="me" style="margin-top: 20px; margin-bottom: 20px">
+
+  </center>
+   <h5>"If it comes; let it. If it goes; let it"</h5>
+  </div>
+
+
+<section>
+  <ul class="icon-list">
+    <li class="icon-item">
+      <a href="https://www.facebook.com/hezekiah.felisilda.1/" class="icon-link"><i class="fab fa-facebook-f"></i></a>
+    </li>
+    <li class="icon-item">
+      <a href="https://www.instagram.com/lilkianie/" class="icon-link"><i class="fab fa-instagram"></i></a>
+    </li>
+    <li class="icon-item">
+      <a href="https://twitter.com/hezfelisilda" class="icon-link"><i class="fab fa-twitter"></i></a>
+    </li>
+    <li class="icon-item">
+      <a href="https://www.youtube.com/channel/UC5unk0BoHX--VQbuggWQEVA" class="icon-link"><i class="fab fa-youtube"></i></a>
+    </li>
+    <li class="icon-item">
+      <a href="https://www.linkedin.com/in/hezekiah-anne-felisilda-954032267/" class="icon-link"><i class="fab fa-linkedin-in"></i></a>
+    </li>    
+  </ul>
+</section>
+
+
+</div>
+  </body>
+</html>

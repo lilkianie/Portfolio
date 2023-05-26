@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>FAMILY</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('https://scontent.fmnl25-4.fna.fbcdn.net/v/t1.15752-9/331760000_106369199013933_4990794685940905024_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeEA82BnVarvJUse_cyiN0135PamBEwKdzvk9qYETAp3O2tD2d4aJ70smdr-3tUgbxVfT59vzxotrL5P15TreRNl&_nc_ohc=HDHXFM-4frQAX-gGkp5&_nc_ht=scontent.fmnl25-4.fna&oh=03_AdT9rKVF2z7yvTS8jSzCsqjI0xz_HA0gIF5emz-JdCjADw&oe=64913A8E');
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.navbar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+    font-family: 'Zeyada', cursive;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
+}
+
+.content bdo {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/*Variables*/
+/*-------------------------------------------*/
+/*Main Body*/
+/*-------------------------------------------*/
+body {
+  margin: 0;
+  background: #131212;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100vw;
+}
+
+img {
+  width: 33.33%;
+  transition: .8s opacity;
+}
+
+/*image hover effect */
+div:hover img {
+  opacity: 0.3;
+}
+
+div:hover img:hover {
+  opacity: 1;
+  /*box-shadow: 0px 0px 8px #F5F5F5;*/
+}
+
+h2 {
+    font-size: 50px;
+    margin-top: 25px;
+    font-family: 'Zeyada', cursive;
+    text-align: center;
+    color: #fff;
+}
+
+h3 {
+    font-size: 50px;
+    margin-top: 30px;
+    font-family: 'Zeyada', cursive;
+    text-align: center;
+    color: black;
+    padding-top: 20px;
+}
+
+main {
+  height: 70vw;
+  width: 70vw;
+  max-width: 1000px;
+  max-height: 1000px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 12px;
+  margin: 2vw auto;
+  background-color: ;
+}
+
+main > article {
+  border: 1px solid #000;
+  display: flex;
+  background: #fff;
+}
+
+main > article div {
+  flex: 1;
+}
+
+.newsitem1 {
+  grid-column: 2;
+  grid-row: 1/3;
+}
+
+.newsitem2 {
+  grid-column: 1/3;
+  grid-row: 3;
+}
+
+.newsitem3 {
+  grid-column: 2/4;
+  grid-row: 4;
+}
+
+.newsitem4 {
+  grid-column: 4;
+  grid-row: 4/6;
+}
+
+.newsitem5 {
+  grid-column: 3/6;
+  grid-row: 2/4;
+}
+
+article div:first-child {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex: 1.5;
+}
+
+article div:last-of-type {
+  padding: 1rem;
+}
+
+article div:last-child p {
+  margin: 0;
+  line-height: 1.5;
+  word-break: break-word;
+  -ms-word-break: break-all;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.newsitem1, .newsitem4 {
+  flex-direction: column;
+}
+
+.newsitem4 {
+  flex-direction: column-reverse;
+}
+
+article.newsitem4 div:last-child p {
+  line-height: 1.7;
+}
+
+.newsitem1 div:first-of-type {
+  background-image: url(images/mommy.jpg);
+}
+
+.newsitem2 div:first-of-type {
+  background-image: url(images/d1&d2.jpg);
+}
+
+.newsitem3 div:first-of-type {
+  background-image: url(images/ajah.jpg);
+}
+
+.newsitem5 div:first-of-type {
+  background-image: url(images/fam.jpg);
+  flex: 2.2;
+}
+
+.newsitem4 div:first-of-type {
+  background-image: url(images/aian.jpg);
+}
+
+.newsitem4 div:last-child p {
+  line-height: 1.6;
+}
+
+@media all and (max-width: 1250px) {
+  main {
+    height: 80vw;
+    width: 80vw;
+  }
+}
+@media all and (max-width: 1150px) {
+  .newsitem4 div:last-child p span {
+    display: none;
+  }
+}
+@media all and (max-width: 1100px) {
+  main {
+    height: 90vw;
+    width: 90vw;
+  }
+}
+@media all and (max-width: 1000px) {
+  main {
+    height: 98vw;
+    width: 98vw;
+  }
+}
+@media all and (max-width: 830px) {
+  .newsitem4 {
+    grid-row: 4/7;
+    grid-column: 4/6;
+  }
+}
+@media all and (max-width: 750px) {
+  main {
+    display: block;
+  }
+
+  main > article {
+    margin-bottom: 2vw;
+    min-height: 200px;
+  }
+
+  .newsitem1, .newsitem4 {
+    flex-direction: row;
+  }
+
+  main > article div:first-child {
+    flex: 2;
+  }
+
+  main > article div:last-child {
+    flex: 4;
+  }
+
+  main > article:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+}
+@media all and (max-width: 550px) {
+  main > article {
+    margin-bottom: 0;
+    border: 1px solid;
+  }
+
+  main {
+    margin: 0;
+  }
+}
+
+footer {
+		clear: both;
+		background-color: transparent;
+		color: #000;
+		padding: 10px;
+		text-align: center;
+		}
+
+        :root {     
+  		--color-icon: black;  
+ 		--social-icon1: #3b5999;
+  		--social-icon2: #e4405f;
+  		--social-icon3: #43C6DB;
+  		--social-icon4: #cd201f;
+  		--social-icon5: #0077B5;  
+		}
+
+	* 	{
+  		margin: 0;
+  		padding: 0; 
+		}
+
+	section {
+  		width: 100%;
+ 		height: 20vh;
+  		display: flex;
+  		align-items: center;
+  		justify-content: center;  
+  		background: var(--bg);
+  		z-index: -10;
+		}
+
+	.icon-list {
+ 		width: 50%;
+  		max-width: 50rem;
+  		padding: 0 1.5rem;
+  		display: flex;
+  		justify-content: space-between;
+		}
+
+	.icon-item {
+  		list-style: none;
+		}
+
+	.icon-link {  
+  		display: inline-flex;
+  		font-size: 2rem;  
+  		text-decoration: none;  
+  		color: var(--color-icon);
+  		width: 6rem;
+  		height: 6rem;   
+  		transition: .5s linear;
+  		position: relative;
+  		z-index: 1;
+  		margin: auto
+		}
+
+	.icon-link:hover {
+  		color: #fff;
+		}
+
+	.icon-link i {
+  		margin: auto;    
+		}
+
+	.icon-link::before {  
+  		content: '';
+  		position: absolute;
+  		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 6rem;
+		height: 6rem;
+		background: #000;
+		border-radius: 50%;
+		z-index: -1;
+		transform: scale(0);
+		transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
+		}
+  
+	.icon-link:hover::before {  
+  		transform: scale(1);
+		}
+
+	.icon-item:nth-child(1) a:hover:before { 
+  		background: var(--social-icon1); 
+		}
+
+	.icon-item:nth-child(2) a:hover:before { 
+  		background: var(--social-icon2); 
+		}
+
+	.icon-item:nth-child(3) a:hover:before { 
+  		background: var(--social-icon3); 
+		}
+
+	.icon-item:nth-child(4) a:hover:before { 
+  		background: var(--social-icon4); 
+		}
+
+	.icon-item:nth-child(5) a:hover:before { 
+  		background: var(--social-icon5); 
+		}
+
+        mark {
+        background-color: gray;
+        color: white;
+        }
+    .end {
+        background-color: #fff;
+        background-image: url(https://scontent.fceb2-2.fna.fbcdn.net/v/t1.15752-9/329639873_864696127931795_7665239668637580877_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGAcciTRuYq1Vdr8bV53kSWjEIZB-6TvLeMQhkH7pO8t5GfXdGf2AfFlalGSqE_rlb1M1sXG4l3Lwjk3RNdDC6a&_nc_ohc=OuhPab85kU0AX8aKJrn&tn=JMeq4mRULgBW1slQ&_nc_ht=scontent.fceb2-2.fna&oh=03_AdRXpa5Gt2JaJHO9G5E6PNXZDFVDmiCUGxW-SXssOzqPAA&oe=64245345);
+    }
+
+    p {
+        font-family: 'Caveat', cursive;
+        font-size: 18px;
+    }
+
+    .column {
+ 		float: left;
+ 		width: 33.33%;
+ 		padding: 5px;
+		transform: rotate(-5deg);
+		}
+
+        .row::after {
+ 		content: "";
+		clear: both;
+		display: table;
+		}
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        address {
+            font-family: 'Caveat', cursive;
+        }
+        .endpic img {
+          width: 600px;
+          height: 350px;
+          margin-left: 33%;
+        }
+        .endpic p {
+            color: #fff;
+            font-size: 22px;
+            text-align: center;
+        }
+
+        aside {
+            width: 30%;
+            padding-left: 10px;
+            margin-left: 15px;
+            float: right;
+            font-style: italic;
+            background-color: lightgray;
+            color: #000;
+            text-align: justify;
+}
+
+        h5 {
+          text-align: center;
+          color: #fff;
+        }
+
+        .summary p{
+          font-size: 20px;
+          color: #fff;
+          font-family: sans-serif;
+          font-style: italic;
+        }
+
+        sub, sup {
+          font-size: 75%;
+          line-height: 0;
+          position: relative;
+          vertical-align: baseline;
+        }
+
+        sup {
+          top: -0.5em;
+        }
+
+        sub {
+          bottom: -0.25em;
+        }
+
+        blockquote {
+          text-align: center;
+          color: #fff;
+          font-family: 'Caveat', cursive;
+          font-size: 25px;
+        }
+
+        code {
+          font-family: 'Caveat', cursive;
+        color: red;
+      background-color: #f1f1f1;
+      padding: 2px;
+      font-size: 105%;
+}
+
+table, th, td {
+  border: 1px solid white;
+  color: #fff;
+  margin-left: 39%;
+  margin-top: 2%;
+  text-align: center;
+  padding: 5px;
+  font-family: 'Caveat', cursive;
+}
+
+address {
+  color: #fff;
+}
+
+
+        
+
+
+</style>
+</head>
+<body>
+        <div class="banner"  id="home">
+            <div class="navbar">
+                <img src="" class="">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#fam">Family</a></li>
+                    <li><a href="#pics">More Pictures</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <header>
+                <h1>MY FAMILY <sub>FELISILDA</sub></h1>
+                <p>Come and learn more about my family.</p>
+                <p><bdo dir="rtl">Come and learn more about my family.</bdo></p> 
+            </header>
+            </div>
+
+        </div>
+        <hr>
+
+        <table>
+          <colgroup>
+            <col span="2">
+            <col >
+          </colgroup>
+          <tr>
+            <th>NAME</th>
+            <th>WORK</th>
+          </tr>
+          <tr>
+            <td>Herald B. Felisilda</td>
+            <td>Programmer/Web Developer</td>
+          </tr>
+          <tr>
+            <td>Ailyn M. Felisilda</td>
+            <td>Private Employee</td>
+          </tr>
+          <tr>
+            <td>Hezekiah Anne C. Felisilda</td>
+            <td>Student</td>
+          </tr>
+          <tr>
+            <td>Herald Alijah C. Felisilda</td>
+            <td>Student</td>
+          </tr>
+          <tr>
+            <td>Haven Aiyana C. Felisilda</td>
+            <td>Student</td>
+          </tr>
+          <tr>
+            <td>Queeny Avah M. Felisilda</td>
+            <td>N/A</td>
+          </tr>
+        </table>
+
+        <h2 id="fam"><ins>FAMILY</ins></h2>
+        
+
+        <main>
+            <article class="newsitem1">
+              <div></div>
+              <div>
+                <p>This is my mother. Her name is <b>Analou C. Felisilda.</b> She died on May 23<sup>rd</sup> 2013, I was still 10 years old that time.</p>
+              </div>
+            </article>
+              <article class="newsitem2">
+                <div></div>
+                <div>
+                <p>This is my Father and Step-Mother. His name is Herald B. Felisilda and hers is Ailyn M. Mondaga. They just married last March 30<sup>th</sup> of 2021. </p>
+                </div>
+            </article>
+            <article class="newsitem3">
+              <div></div>
+              <div>
+                <p><i>This is my brother</i> Herald Alijah C. Felisilda. He is 16 years old now.</p>
+              </div>
+            </article>
+            <article class="newsitem4">
+              <div></div>
+               <div>
+                 <p>This <i>is my sister</i> <span>Haven Aiyana C. Felisilda.</span> She is<span> 13 years</span> old.</p>
+              </div>
+            </article>
+            <article class="newsitem5">
+              <div></div>
+              <div>
+                <p>This is me and my family now. My step-mother gave birth to my step-sister on September 26<sup>th</sup> of 2021.</p> 
+              </div>
+            </article>
+          </main>
+
+          <blockquote cite="https://www.shutterfly.com/ideas/family-quotes/">
+            “Family is not an important thing. It’s everything.” –Michael J. Fox
+            </blockquote>
+
+          <hr>
+            
+        <h2 id="pics"><ins>MORE PICTURES</ins></h2>
+
+        <hr>
+
+        <div class="gallery">
+            <img src="images/1.jpg">
+            <img src="images/2.jpg">
+            <img src="images/3.jpg">
+            <img src="images/4.jpg">
+            
+            <img src="images/5.jpg">
+            <img src="images/6.jpg">
+          
+            <img src="images/7.jpg">
+            <img src="images/8.jpg">
+            <img src="images/9.jpg">
+            <img src="images/10.jpg">
+            <img src="images/11.jpg">
+            <img src="images/12.jpg">
+            <img src="images/13.jpg">
+            <img src="https://scontent.fmnl25-2.fna.fbcdn.net/v/t1.15752-9/331770827_760085545487964_4444675954612203905_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHxmDgGQYyKjHBNrHF90itdciMkCjbtkYFyIyQKNu2Rgbkg0diN0NftcOlxNMnNXBsrwHZkfXJmrOIslUsxAhWG&_nc_ohc=iZtzprb-AfkAX-wPx0_&_nc_ht=scontent.fmnl25-2.fna&oh=03_AdT3CFtDud-1SIpmn1Zpcgm-W0fHbgTH9mHnEVTB_-J53Q&oe=64242DF1">
+        </div>
+
+        <div class="row">
+			<div class="column">
+			  <img src="images/f1.jpg" alt="friends1" style="width:100%">
+			</div>
+			<div class="column">
+			  <img src="images/f2.jpg" alt="friends2" style="width:100%">
+			</div>
+			<div class="column">
+			  <img src="images/f3.jpg" alt="friends3" style="width:100%">
+			</div>
+
+                <div class="endpic">
+            <img src="images/wedding.jpg"/>
+
+            <p>All the moments my family and I shared have made me realize how much I miss the <b>“good old days”.</b> A vivid memory of mine is a time when all of my family would sit and bundled up, watching movies in the cold night, celebrating birthdays and taking trips.</p>
+
+            <aside>
+                <p style="color: black;">This pic was taken during their wedding on March 30th of 2021.</p>
+                </aside>
+        </div>
+
+		  </div>
+      <div class="summary">
+      <h5>MORE</h5>
+
+<details>
+  <summary style="color: #fff;">SUMMARY</summary>
+  <p><i>I only have a <dfn>small family</dfn> but with this family I experienced a lot of <code>love and respect.</code> There's nothing that I could be thankful for.</i></p><br>
+
+  <address>
+    Written by <a href="mailto:webmaster@example.com">Hezekiah Anne Felisilda</a>.<br> 
+    Visit us at:<br>
+    <del>Example.com</del><br>
+    <em>Bohol</em><br>
+    <mark>PHILIPPINES</mark>
+    </address>
+</details>
+</div>     
+
+       
+
+        <div class="end">
+
+        <h3 style="color:#000" id="contact"><ins>CONTACT</ins></h3>
+
+        
+
+        <section id="contact">
+            <ul class="icon-list">
+              <li class="icon-item">
+                <a target="_blank" href="https://www.facebook.com/hezekiah.felisilda.1/" class="icon-link"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li class="icon-item">
+                <a target="_blank" href="https://www.instagram.com/lilkianie/" class="icon-link"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li class="icon-item">
+                <a target="_blank" href="https://twitter.com/hezfelisilda" class="icon-link"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="icon-item">
+                <a target="_blank" href="https://www.youtube.com/channel/UC5unk0BoHX--VQbuggWQEVA" class="icon-link"><i class="fab fa-youtube"></i></a>
+              </li>
+              <li class="icon-item">
+                <a target="_blank" href="https://www.linkedin.com/in/hezekiah-anne-felisilda-954032267/" class="icon-link"><i class="fab fa-linkedin-in"></i></a>
+              </li>    
+            </ul>
+          </section>
+
+        <footer>
+            &copy; Hezekiah Anne C. Felisilda <abbr title="Bachelor of Science in Computer Science">BSCS-1</abbr>
+          </footer>
+        </div>
+
+        <script>
+          window.onscroll = function() {myFunction()};
+          
+          var navbar = document.getElementById("navbar");
+          var sticky = navbar.offsetTop;
+          
+          function myFunction() {
+            if (window.pageYOffset >= sticky) {
+              navbar.classList.add("sticky")
+            } else {
+              navbar.classList.remove("sticky");
+            }
+          }
+          </script>
+</body>
+</html>
+
+
+
+
