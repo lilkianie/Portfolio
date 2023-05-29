@@ -165,7 +165,60 @@ section {
 }
 .homepage {
 font-size: 200%;
+position: relative;
+padding-left: 20px;
 }
+.container2 {
+					background: linear-gradient(
+							rgba(21, 22, 29, 0.9),
+							rgba(21, 22, 29, 0.9)
+						),
+						url(http://cdn.wonderfulengineering.com/wp-content/uploads/2014/07/black-and-white-wallpaper-13.jpg);
+					padding: 15px 9%;
+					padding-bottom: 100px;
+				}
+				.container2 .box-container {
+					display: grid;
+					grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+					gap: 15px;
+				}
+				.container2 .box-container .box {
+					box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+					border-radius: 5px;
+					background: #fff;
+					text-align: center;
+					padding: 30px 20px;
+				}
+				.container2 .box-container .box img {
+					height: 200px;
+				}
+				.container2 .box-container .box h3 {
+					color: #444;
+					font-size: 22px;
+					padding: 10px 0;
+				}
+				.container2 .box-container .box .btn {
+					margin-top: 10px;
+					display: inline-block;
+					background: #333;
+					color: #fff;
+					font-size: 17px;
+					border-radius: 5px;
+					padding: 8px 25px;
+				}
+				.container2 .box-container .box .btn:hover {
+					letter-spacing: 1px;
+				}
+				.container2 .box-container .box:hover {
+					box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+					transform: scale(1.03);
+				}
+
+				@media (max-width: 768px) {
+					.container2 {
+						padding: 20px;
+					}
+				}
 </style>
 </head>
 <body>
@@ -180,9 +233,6 @@ font-size: 200%;
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
     <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -210,7 +260,7 @@ font-size: 200%;
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <p><b><i class="fa fa-user w3-margin-right"></i>Me</b></p><br>
-      <img src="me1.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+      <img src="me1.jpg"  onclick="onClick(this)" class="w3-hover-opacity" alt="Photo of Me" width="350" height="333">
     </div>
 
     <!-- Hide this text on small devices -->
@@ -252,56 +302,61 @@ font-size: 200%;
   </div>
 </div>
 
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
-  </div>
-</div>
 
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here are some of my latest work.<br> Click on the images to make them bigger</em></p><br>
+  <h3 class="w3-center">PORTFOLIO</h3>
+  <p class="w3-center"><em>Here are some of my latest work.<br> Click on the button to view more</em></p><br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-      <img src="p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
-    </div>
+<div class="container2">
+<div class="box-container">
+  <div class="box">
+    <img src="aboutme.jpg" alt="" />
+    <h3>ABOUT ME</h3>
+    <a href="aboutme.html" target="_blank" class="btn">View More</a>
   </div>
-
-  <div class="w3-row-padding w3-center w3-section">
-    <div class="w3-col m3">
-      <img src="p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-    </div>
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+  <div class="box">
+    <img src="family.jpg" alt="" />
+    <h3>ACTIVITY 4</h3>
+    <a href="family.html" target="_blank" class="btn">View More</a>
   </div>
-</div>
+  <div class="box">
+    <img src="myphotos.jpg" alt="" />
+    <h3>ACTIVITY 6</h3>
+    <a href="myPhotos.html" target="_blank" class="btn"
+      >View More</a
+    >
+  </div>
+  <div class="box">
+    <img src="quotes.jpg" alt="" />
+    <h3>ACTIVITY 7</h3>
+    <a href="quote1.html" target="_blank" class="btn">View More</a>
+  </div>
+  <div class="box">
+    <img src="silly.jpg" alt="" />
+    <h3>ACTIVITY 8</h3>
+    <a href="me1.html" target="_blank" class="btn">View More</a>
+  </div>
+  <div class="box">
+    <img src="ub.jpg" alt="" />
+    <h3>ACTIVITY 9</h3>
+    <a href="myVideo.html" target="_blank" class="btn">View More</a>
+  </div>
+  <div class="box">
+    <img src="friend.jpg" alt="" />
+    <h3>ACTIVITY 10</h3>
+    <a href="friendRegistry.html" target="_blank" class="btn"
+      >View More</a
+    >
+  </div>
+  <div class="box">
+    <img src="names.jpg" alt="" />
+    <h3>ACTIVITY 11</h3>
+    <a href="related.html" target="_blank" class="btn">View More</a>
+  </div>
+              </div>
+            </div>
 
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
@@ -312,12 +367,6 @@ font-size: 200%;
   </div>
 </div>
 
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-  </div>
-</div>
 
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
@@ -334,21 +383,7 @@ font-size: 200%;
         <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +639773164584<br>
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: lilkianie@gmail.com<br>
       </div>
-      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-      <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-          </div>
-        </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </form>
+      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note</p>
     </div>
   </div>
 </div>
@@ -356,22 +391,22 @@ font-size: 200%;
 <section>
   <ul class="icon-list">
     <li class="icon-item">
-      <a href="https://www.facebook.com/hezekiah.felisilda.1/" class="icon-link"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.facebook.com/hezekiah.felisilda.1/" class="icon-link" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
     </li>
     <li class="icon-item">
-      <a href="https://www.instagram.com/lilkianie/" class="icon-link"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.instagram.com/lilkianie/" class="icon-link" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
     </li>
     <li class="icon-item">
-      <a href="https://twitter.com/hezfelisilda" class="icon-link"><i class="fab fa-twitter"></i></a>
+      <a href="https://twitter.com/hezfelisilda" class="icon-link" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
     </li>
     <li class="icon-item">
-      <a href="https://www.youtube.com/channel/UC5unk0BoHX--VQbuggWQEVA" class="icon-link"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.youtube.com/channel/UC5unk0BoHX--VQbuggWQEVA" class="icon-link" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
     </li>
     <li class="icon-item">
-      <a href="https://www.linkedin.com/in/hezekiah-anne-felisilda-954032267/" class="icon-link"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.linkedin.com/in/hezekiah-anne-felisilda-954032267/" class="icon-link" target="_blank" title="LinekedIn"><i class="fab fa-linkedin-in"></i></a>
     </li>    
   </ul>
-  <div class="homepage"><a href="homepage.html" target="_blank"<i class="fa-solid fa-house" style="font-size: 100%;"></i></a>
+  <div class="homepage"><a href="homepage.html" target="_blank"<i class="fa-solid fa-house" style="font-size: 100%;" title="Go to my Homepage"></i></a>
   </div>
 </section>
 
